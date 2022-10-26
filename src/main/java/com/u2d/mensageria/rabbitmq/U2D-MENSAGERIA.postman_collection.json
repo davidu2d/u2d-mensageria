@@ -1,0 +1,137 @@
+{
+	"info": {
+		"_postman_id": "e528701e-7936-4f0c-847c-534315e60728",
+		"name": "U2D-MENSAGERIA",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "RabbitMQ Direct",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/rabbitmq/direct?exchangeName=direct.exchange&routingKey=direct.routingkey&messageData=msg no direct 1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"rabbitmq",
+						"direct"
+					],
+					"query": [
+						{
+							"key": "exchangeName",
+							"value": "direct.exchange"
+						},
+						{
+							"key": "routingKey",
+							"value": "direct.routingkey"
+						},
+						{
+							"key": "messageData",
+							"value": "msg no direct 1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RabbitMQ Fanout",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/rabbitmq/fanout?exchangeName=fanout.exchange&messageData=msg no fanout 1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"rabbitmq",
+						"fanout"
+					],
+					"query": [
+						{
+							"key": "exchangeName",
+							"value": "fanout.exchange"
+						},
+						{
+							"key": "messageData",
+							"value": "msg no fanout 1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RabbitMQ Topic",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/rabbitmq/topic?exchangeName=topic.exchange&messageData=msg no topic all&routingKey=queue.all",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"rabbitmq",
+						"topic"
+					],
+					"query": [
+						{
+							"key": "exchangeName",
+							"value": "topic.exchange"
+						},
+						{
+							"key": "messageData",
+							"value": "msg no topic all"
+						},
+						{
+							"key": "routingKey",
+							"value": "queue.all"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RabbitMQ Header",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/rabbitmq/header?exchangeName=header.exchange&messageData=msg no header&department=marketing",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"rabbitmq",
+						"header"
+					],
+					"query": [
+						{
+							"key": "exchangeName",
+							"value": "header.exchange"
+						},
+						{
+							"key": "messageData",
+							"value": "msg no header"
+						},
+						{
+							"key": "department",
+							"value": "marketing"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
